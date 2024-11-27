@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estruturas de Repetição em JavaScript</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+        .exercise {
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 3px;
+        }
+</style>
+</head>
+<body>
+<h1>Estruturas de Repetição em JavaScript</h1>
+<p>Estruturas de repetição são essenciais para a automação de tarefas repetitivas dentro de um programa. Elas permitem que você execute um bloco de código várias vezes, sem precisar escrever o mesmo código repetidamente. JavaScript oferece três tipos principais de estruturas de repetição: <code>for</code>, <code>while</code> e <code>do...while</code>. Vamos entender como cada uma funciona e quando usá-las.</p>
+ 
+    <h2>1. Estrutura <code>for</code></h2>
+<p>A estrutura <code>for</code> é usada quando o número de iterações é conhecido antecipadamente. Ela é especialmente útil quando precisamos iterar sobre arrays ou executar um bloco de código um número fixo de vezes.</p>
+ 
+    <h3>Sintaxe:</h3>
+<pre><code>for (inicialização; condição; incremento) {
+    // bloco de código a ser executado
+}</code></pre>
+<ul>
+<li><strong>inicialização:</strong> Executada apenas uma vez, antes da primeira iteração. Geralmente usada para inicializar variáveis.</li>
+<li><strong>condição:</strong> A cada iteração, é verificada. Se for verdadeira, o bloco de código é executado. Se for falsa, o laço é interrompido.</li>
+<li><strong>incremento:</strong> Executado após cada iteração, é utilizado para modificar a variável de controle.</li>
+</ul>
+ 
+    <h3>Exemplo de uso do <code>for</code>:</h3>
+<div class="example">
+<pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log("Iteração número " + i);
+}
+</code></pre>
+</div>
+<p>O código acima imprime as mensagens "Iteração número 0" até "Iteração número 4" no console.</p>
+ 
+    <h2>2. Estrutura <code>while</code></h2>
+<p>A estrutura <code>while</code> é usada quando não sabemos o número exato de iterações, mas sabemos que a repetição deve continuar enquanto uma condição for verdadeira. A condição é verificada antes de cada iteração.</p>
+ 
+    <h3>Sintaxe:</h3>
+<pre><code>while (condição) {
+    // bloco de código a ser executado
+}</code></pre>
+<ul>
+<li><strong>condição:</strong> A condição é verificada antes de cada iteração. Se for verdadeira, o código dentro do bloco será executado. Caso contrário, o laço é interrompido.</li>
+</ul>
+ 
+    <h3>Exemplo de uso do <code>while</code>:</h3>
+<div class="example">
+<pre><code>
+let i = 0;
+while (i < 5) {
+    console.log("Iteração número " + i);
+    i++;
+}
+</code></pre>
+</div>
+<p>O código acima imprime as mensagens "Iteração número 0" até "Iteração número 4", de forma semelhante ao exemplo do <code>for</code>. A diferença é que aqui a variável <code>i</code> é incrementada manualmente dentro do bloco de código.</p>
+ 
+    <h2>3. Estrutura <code>do...while</code></h2>
+<p>A estrutura <code>do...while</code> é semelhante à estrutura <code>while</code>, mas a principal diferença é que o bloco de código será executado pelo menos uma vez, mesmo que a condição seja falsa. A condição é verificada após a execução do bloco.</p>
+ 
+    <h3>Sintaxe:</h3>
+<pre><code>do {
+    // bloco de código a ser executado
+} while (condição);</code></pre>
+<ul>
+<li><strong>condição:</strong> A condição é verificada após a execução do bloco de código. Se for verdadeira, o bloco será executado novamente. Se for falsa, o laço será interrompido.</li>
+</ul>
+ 
+    <h3>Exemplo de uso do <code>do...while</code>:</h3>
+<div class="example">
+<pre><code>
+let i = 0;
+do {
+    console.log("Iteração número " + i);
+    i++;
+} while (i < 5);
+</code></pre>
+</div>
+<p>O código acima também imprime as mensagens "Iteração número 0" até "Iteração número 4", mas, como a condição é verificada após a execução do código, o laço será executado pelo menos uma vez, independentemente da condição.</p>
+ 
+    <h2>Exemplos Práticos</h2>
+<p>A seguir, você pode testar os exemplos de código no Visual Studio Code para ver como as estruturas de repetição funcionam na prática.</p>
+<p><em>Exemplo prático 1: Exibir os números de 1 a 10 usando o <code>for</code>.</em></p>
+<pre><code>
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+</code></pre>
+<p><em>Exemplo prático 2: Imprimir uma mensagem até que o número seja maior que 5 usando o <code>while</code>.</em></p>
+<pre><code>
+let i = 1;
+while (i <= 5) {
+    console.log("Número é " + i);
+    i++;
+}
+</code></pre>
+<p><em>Exemplo prático 3: Fazer o código rodar pelo menos uma vez com <code>do...while</code>.</em></p>
+<pre><code>
+let i = 0;
+do {
+    console.log("Número é " + i);
+    i++;
+} while (i < 0);  // A condição é falsa, mas o loop ainda ocorre uma vez.
+</code></pre>
+ 
+    <h2>Exercícios</h2>
+<p>Agora que você aprendeu sobre as estruturas de repetição em JavaScript, pratique com os seguintes exercícios:</p>
+<div class="exercise">
+<ol>
+<li>Utilize o <code>for</code> para imprimir todos os números de 1 a 100 que são divisíveis por 3.</li>
+<li>Crie um programa com <code>while</code> que leia um número até que o usuário digite um número negativo.</li>
+<li>Implemente um <code>do...while</code> que exibe "Continuando..." até que o número de tentativas seja 3.</li>
+</ol>
+</div>
+ 
+    <h2>Conclusão</h2>
+<p>Estruturas de repetição são fundamentais para controlar o fluxo de execução em programas de forma eficiente. Cada tipo de laço tem uma utilidade específica, dependendo da situação em que você se encontra:</p>
+<ul>
+<li><code>for</code>: quando você sabe quantas vezes precisa repetir algo.</li>
+<li><code>while</code>: quando a repetição depende de uma condição que pode variar durante a execução.</li>
+<li><code>do...while</code>: quando você quer garantir que o código seja executado pelo menos uma vez.</li>
+</ul>
+ 
+</body>
+</html>
